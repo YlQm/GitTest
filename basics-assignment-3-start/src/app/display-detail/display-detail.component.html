@@ -1,0 +1,15 @@
+<p>
+  display-detail works!
+</p>
+
+<p>Secret Password = tuna</p>
+<button class="btn btn-primary"
+        (click)="onClicked()">Display Details</button>
+<p *ngIf="buttonClicked>0">{{ displayMessage }}</p>
+<div *ngFor="let logs of buttonLog "
+     [ngStyle]="{'getMyStyles()' : logs >= 5}"> {{ logs }}
+     <!--[ngClass]="{'white-text': logs >=5}"> {{ logs }}-->
+</div>
+<div [ngStyle]="getMyStyles()">
+  NgStyle Example
+</div>
